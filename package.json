@@ -1,0 +1,11 @@
+{
+  "name": "uiv",
+  "private": true,
+  "packageManager": "pnpm@11.0.8",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "pnpm --filter web build && node scripts/build-go.mjs",
+    "test": "node scripts/ensure-dist.mjs && go test ./...",
+    "lint": "pnpm --filter web lint && node scripts/lint-go.mjs"
+  }
+}
