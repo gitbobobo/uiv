@@ -65,7 +65,7 @@ curl.exe -fsS -H "Authorization: Bearer $env:UIV_TOKEN" -F "file=@screenshot.png
 
 ```python
 from PIL import Image
-frames = [("board.png", 1200), ("hover.png", 700), ("dialog.png", 3600)]
+frames = [("board.png", 1000), ("hover.png", 700), ("dialog.png", 3600)]
 imgs = [Image.open(f) for f, _ in frames]
 imgs[0].save("demo.gif", save_all=True, append_images=imgs[1:],
              duration=[d for _, d in frames], loop=0, optimize=True)
